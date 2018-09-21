@@ -16,10 +16,9 @@ body {
 
 
 .one {
-    positon: absolute;
-    margin:{
-    left: 12.2rem;
-    top:1.8rem;
+    margin: {
+        left: 12.2rem;
+        top: 1.8rem;
     }
     z-index: 1;
     width: 0;
@@ -43,3 +42,51 @@ body {
     border-radius: 3px;
     box-shadow: 0 20px 0 0 #754F44;
 }
+
+.candle {
+    position: absolute;
+    z-index: 3;
+    width: .6rem;
+    height: 3.5rem;
+    background-color: #F2A594;
+    margin: {
+        top: -11.5rem;
+        left: 12rem;
+    }
+    background: repeating-linear-gradient(45deg, #cdcdcd, whitesmoke 1px, #F2A594 2px, #F2A594 8px);
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+    }
+    &:before {
+        margin: {
+            top: -1rem;
+            left: -.2rem;
+        }
+        width: 15px;
+        height: 15px;
+        background: #FFF;
+        border-radius: 0 100px 60px 100px;
+        transform: rotate(40deg);
+        animation: light 0.3s infinite ease;
+    }
+    &:after{
+
+    }
+}
+
+@keyframes light{ 
+	0%{
+		transform: rotate(45deg);
+	}
+	50%{
+		transform: rotate(40deg);
+	}
+	75%{
+		transform: rotate(45deg)
+	}
+	100%{
+		transform: rotate(48deg);
+	}
+	}
