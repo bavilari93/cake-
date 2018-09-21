@@ -107,6 +107,19 @@ body {
     border-radius: 100%;
     background: #EF5686; }
 
+.drip {
+  z-index: 100;
+  background-color: #F2A594;
+  height: .4rem;
+  width: .4rem;
+  border-radius: 70% 40% 100% 100%;
+  margin-left: 11.8rem;
+  margin-top: -11.5rem;
+  margin-animation: 6s drop infinite ease; }
+
+@keyframes drop {
+  100% {
+    transform: translateY(50px); } }
 @keyframes light {
   0% {
     transform: rotate(45deg); }
